@@ -8,7 +8,7 @@ php artisan migrate:fresh --seed
 **Check the Website's Post Page for all the Installation Instructions**
 
 
----Admin Login Details---
+**---Admin Login Details---**
 
 Email   : admin@mail.com
 Password: codeastro.com

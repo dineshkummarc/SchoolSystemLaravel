@@ -18,12 +18,12 @@ Password: codeastro.com
 Email   : teacher@mail.com
 Password: codeastro.com
 
----Student Login Details---
+**---Student Login Details---**
 
 Email   : student@mail.com
 Password: codeastro.com
 
----Parents Login Details---
+**---Parents Login Details---**
 
 Email   : parent@mail.com
 Password: codeastro.com

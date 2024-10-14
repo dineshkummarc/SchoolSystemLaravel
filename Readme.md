@@ -4,11 +4,7 @@ getting the database through migration:-
 php artisan migrate:fresh --seed
 
 **Log on to portal!***
-
-
 **Developed by Priya Jain**
-
-
 **Check the Website's Post Page for all the Installation Instructions**
 
 

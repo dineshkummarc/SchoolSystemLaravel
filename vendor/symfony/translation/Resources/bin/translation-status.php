@@ -9,10 +9,6 @@
  * file that was distributed with this source code.
  */
 
-if ('cli' !== \PHP_SAPI) {
-    throw new Exception('This script must be run from the command line.');
-}
-
 $usageInstructions = <<<END
 
   Usage instructions
@@ -166,11 +162,11 @@ function extractLocaleFromFilePath($filePath)
 function extractTranslationKeys($filePath)
 {
     $translationKeys = [];
-    $contents = new SimpleXMLElement(file_get_contents($filePath));
+    $contents = new \SimpleXMLElement(file_get_contents($filePath));
 
     foreach ($contents->file->body->{'trans-unit'} as $translationKey) {
         $translationId = (string) $translationKey['id'];
-        $translationKey = (string) ($translationKey['resname'] ?? $translationKey->source);
+        $translationKey = (string) $translationKey->source;
 
         $translationKeys[$translationId] = $translationKey;
     }

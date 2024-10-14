@@ -37,7 +37,6 @@ use PHPUnit\Util\Filter;
 use ReflectionClass;
 use ReflectionException;
 use SebastianBergmann\Comparator\ComparisonFailure;
-use SebastianBergmann\Timer\RuntimeException;
 use Throwable;
 
 /**
@@ -61,7 +60,7 @@ final class TeamCity extends ResultPrinter
     private $flowId;
 
     /**
-     * @throws RuntimeException
+     * @throws \SebastianBergmann\Timer\RuntimeException
      */
     public function printResult(TestResult $result): void
     {
@@ -370,7 +369,7 @@ final class TeamCity extends ResultPrinter
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }

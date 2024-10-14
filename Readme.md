@@ -13,7 +13,7 @@ php artisan migrate:fresh --seed
 Email   : admin@mail.com
 Password: codeastro.com
 
----Teacher Login Details---
+**---Teacher Login Details---**
 
 Email   : teacher@mail.com
 Password: codeastro.com
